@@ -1,5 +1,13 @@
 import express from 'express';
-import { createNote, deleteNote, editNote, getAllNotes, getNote } from '../controllers/noteController';
+import {
+  archiveNote,
+  createNote,
+  deleteNote,
+  editNote,
+  getAllNotes,
+  getNote,
+  unarchiveNote,
+} from '../controllers/noteController';
 
 export const noteRoutes = express.Router();
 
@@ -9,3 +17,5 @@ noteRoutes.patch('/:id', editNote);
 noteRoutes.get('/:id', getNote);
 noteRoutes.get('/', getAllNotes);
 noteRoutes.get('/stats');
+noteRoutes.put('/archive/:id', archiveNote);
+noteRoutes.put('/unarchive/:id', unarchiveNote);
