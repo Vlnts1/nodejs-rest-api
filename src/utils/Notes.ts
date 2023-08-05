@@ -8,6 +8,7 @@ export const mockedNotes: Note[] = [
     category: 'Personal',
     content: 'Sketch or paint for at least 45 minutes',
     date: '2023-08-01',
+    archived: false,
   },
   {
     id: '2',
@@ -16,6 +17,7 @@ export const mockedNotes: Note[] = [
     category: 'Work',
     content: 'Review and respond to emails after lunch.',
     date: '2023-08-02',
+    archived: false,
   },
   {
     id: '3',
@@ -24,6 +26,7 @@ export const mockedNotes: Note[] = [
     category: 'Personal',
     content: 'Declutter the living room shelves.',
     date: '2023-08-03',
+    archived: false,
   },
   {
     id: '4',
@@ -32,6 +35,7 @@ export const mockedNotes: Note[] = [
     category: 'Work',
     content: 'Schedule a meeting with the marketing team',
     date: '2023-08-04',
+    archived: false,
   },
   {
     id: '5',
@@ -40,6 +44,7 @@ export const mockedNotes: Note[] = [
     category: 'Personal',
     content: 'Practice meditation for 15 minutes.',
     date: '2023-08-05',
+    archived: false,
   },
   {
     id: '6',
@@ -48,6 +53,7 @@ export const mockedNotes: Note[] = [
     category: 'Work',
     content: 'This is the content of Note 6.',
     date: '2023-08-06',
+    archived: false,
   },
   {
     id: '7',
@@ -56,5 +62,6 @@ export const mockedNotes: Note[] = [
     category: 'Personal',
     content: 'Go for a 30-minute jog in the morning.',
     date: '2023-08-07',
+    archived: true,
   },
 ];

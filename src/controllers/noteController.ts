@@ -18,6 +18,7 @@ export const createNote = (req: Request, res: Response) => {
       category: req.body.category,
       content: req.body.content,
       created: new Date().toISOString(),
+      archived: false,
     };
 
     notes.push(newNote);
@@ -83,4 +84,25 @@ export const editNote = (req: Request, res: Response) => {
       res.status(500).json({ error: 'An internal server error occurred.' });
     }
   }
+};
+
+export const getAllNotes = (req: Request, res: Response) => {
+  try {
+    res.status(200).json(notes);
+  } catch (error) {
+    res.status(500).json({ error: 'An internal server error occurred.' });
+  }
+};
+
+export const getNote = (req: Request, res: Response) => {
+  const noteId = req.params.id;
+
+  const note = notes.find((note) => note.id === noteId);
+
+  if (!note) {
+    res.status(404).json({ error: 'Note not found' });
+    return;
+  }
+
+  res.status(200).json(note);
 };
