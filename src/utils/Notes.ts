@@ -1,6 +1,6 @@
-import { Note } from "../Types/Note";
+import { Note } from '../Types/Note';
 
-export const notes: Note[] = [
+export const mockedNotes: Note[] = [
   {
     id: '1',
     name: 'Creative Time',
@@ -57,4 +57,4 @@ export const notes: Note[] = [
     content: 'Go for a 30-minute jog in the morning.',
     date: '2023-08-07',
   },
-]
+];
