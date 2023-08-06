@@ -1,7 +1,11 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+import { noteRoutes } from './routes/noteRoutes';
 
 const app = express();
 
-app.use(express.json());
+app.use(bodyParser.json());
 
-export default app;
+app.use('/notes', noteRoutes);
+
+export { app };
