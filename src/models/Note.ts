@@ -7,7 +7,6 @@ export const noteSchema = yup.object().shape({
   content: yup.string().required(),
 });
 
-
 export const getNoteSchema = yup.object().shape({
   id: yup.string().required(),
 });
